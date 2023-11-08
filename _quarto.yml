@@ -1,19 +1,29 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "biostat777-intro-zixing-liu"
+  title: "Peter Liu"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
       - about.qmd
+      - ex_analysis.qmd
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
+    code-fold: true
+    code-summary: "Show Code"
+    page-layout: full
+    
+editor: visual
+
+execute:
+  freeze: auto
 
 
 
