@@ -3,11 +3,36 @@ title: "Example Analysis"
 author: 
   - name: Zixing (Peter) Liu
 date: 2023-11-10
+description: An example analysis with simulated patient's medical history data
 categories: [PH_140_777]
 knitr: true
 editor: visual
 ---
 
 ```{r}
-
+#| label: "loading packages"
+#| include: false
+library(here)
+library(tidyverse)
 ```
+
+::: {layout-ncol="2"}
+![](images/tidytuesday.jpg)
+
+![The data was posted on [tidytuesday](https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-10-24) provided by [Jenna Reps](https://github.com/jreps) from the [R/Pharma Conference](https://rinpharma.com/).](images/heading_pic.png)
+
+:::
+
+```{r}
+#| label: "Loading Data"
+#| message: false
+if (!file.exists(here("data", "patient_risk.RDS"))) {
+    patient_risk <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-10-24/patient_risk_profiles.csv", name_repair=FALSE)
+
+    # save the files to RDS objects
+    saveRDS(patient_risk, file = here("data", "patient_risk.RDS"))
+}
+
+patient_risk = readRDS(here("data", "patient_risk.RDS"))
+```
+

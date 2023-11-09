@@ -12,5 +12,12 @@
     "title": "Peter Liu",
     "section": "",
     "text": "I am a first-year ScM student in biostatistics at Johns Hopkins Bloomberg School of Public Health (JHSPH). I am interested in research about autoimmune diseases, autoinflammatory diseases, and chronic pain through the lens of precision medicine."
+  },
+  {
+    "objectID": "analysis.html",
+    "href": "analysis.html",
+    "title": "Example Analysis",
+    "section": "",
+    "text": "The data was posted on tidytuesday provided by Jenna Reps from the R/Pharma Conference.\n\n\n\n\n\n\n\nShow Code\nif (!file.exists(here(\"data\", \"patient_risk.RDS\"))) {\n    patient_risk &lt;- readr::read_csv(\"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-10-24/patient_risk_profiles.csv\", name_repair=FALSE)\n\n    # save the files to RDS objects\n    saveRDS(patient_risk, file = here(\"data\", \"patient_risk.RDS\"))\n}\n\npatient_risk = readRDS(here(\"data\", \"patient_risk.RDS\"))"
   }
 ]

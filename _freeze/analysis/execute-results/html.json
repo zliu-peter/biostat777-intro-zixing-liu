@@ -1,7 +1,7 @@
 {
-  "hash": "2034923f122b1e254e827ff2c69e474f",
+  "hash": "2af840d861c089e506399537485a8c88",
   "result": {
-    "markdown": "---\ntitle: \"Example Analysis\"\nauthor: \n  - name: Zixing (Peter) Liu\ndate: 2023-11-10\ncategories: [PH_140_777]\nknitr: true\neditor: visual\n---\n\n::: {.cell}\n\n:::\n",
+    "markdown": "---\ntitle: \"Example Analysis\"\nauthor: \n  - name: Zixing (Peter) Liu\ndate: 2023-11-10\ndescription: An example analysis with simulated patient's medical history data\ncategories: [PH_140_777]\nknitr: true\neditor: visual\n---\n\n\n\n\n::: {layout-ncol=\"2\"}\n![](images/tidytuesday.jpg)\n\n![The data was posted on [tidytuesday](https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-10-24) provided by [Jenna Reps](https://github.com/jreps) from the [R/Pharma Conference](https://rinpharma.com/).](images/heading_pic.png)\n\n:::\n\n\n::: {.cell}\n\n```{.r .cell-code}\nif (!file.exists(here(\"data\", \"patient_risk.RDS\"))) {\n    patient_risk <- readr::read_csv(\"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-10-24/patient_risk_profiles.csv\", name_repair=FALSE)\n\n    # save the files to RDS objects\n    saveRDS(patient_risk, file = here(\"data\", \"patient_risk.RDS\"))\n}\n\npatient_risk = readRDS(here(\"data\", \"patient_risk.RDS\"))\n```\n:::\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
