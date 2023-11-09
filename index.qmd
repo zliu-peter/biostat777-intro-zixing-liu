@@ -1,7 +1,19 @@
 ---
-title: "biostat777-intro-zixing-liu"
+title: "Peter Liu"
+image: images/Peter.jpg
+about:
+  template: jolla
+  links:
+    - text: "{{< fa brands linkedin >}} Linkedin"
+      href: https://linkedin.com/in/zixing-peter-liu
+    - text: Github
+      icon: github
+      href: https://github.com/zliu-peter
+      
+    - text: "{{< fa envelope >}} Email"
+      href: mailto:zliu94@jhu.edu
 ---
 
-This is a Quarto website.
+<!-- For icons, I used fontawesome -->
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+**I am a first-year ScM student in biostatistics at Johns Hopkins Bloomberg School of Public Health (JHSPH). I am interested in research about autoimmune diseases, autoinflammatory diseases, and chronic pain through the lens of precision medicine.**

@@ -9,11 +9,13 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      - ex_analysis.qmd
+      - analysis.qmd
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: lumen
+      dark: cyborg
     css: styles.css
     toc: true
     code-fold: true
