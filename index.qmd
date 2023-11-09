@@ -1,5 +1,5 @@
 ---
-title: "Peter Liu"
+title: "Zixing \"Peter\" Liu"
 image: images/Peter.jpg
 about:
   template: jolla
