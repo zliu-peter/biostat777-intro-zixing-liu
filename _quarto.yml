@@ -13,14 +13,14 @@ website:
 
 format:
   html:
-    theme: 
+    theme:
       light: lumen
       dark: cyborg
     css: styles.css
     toc: true
     code-fold: true
     code-summary: "Show Code"
-    page-layout: full
+    page-layout: article
     
 editor: visual
 
