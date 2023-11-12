@@ -58,7 +58,7 @@ In this example analysis, I am investigating patterns within the board game data
     -   Who are very prolific?
     -   When are they active?
     -   Do they have good ratings? Are ratings consistent over time?
-    -   What are game categories are these prolific designers associated with?
+    -   What game categories are these prolific designers associated with?
 -   What games are the most owned since the 1990s?
     -   What are the top board game categories since the 1990s?
         -   Is there any trends?
@@ -74,7 +74,6 @@ This analysis is intended for anyone in PH.140.777, the general public, as well 
 The data source is tidytuesday, as described above. [Click here for more details.](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-01-25)[@datsource]
 
 There are two datasets, one containing general info about game name, id, and rating while the other including more comprehensive details on board game designer, artist, description, category, mechanic, published year, rating, etc. [Click here for the data dictionary.](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-01-25#data-dictionary)
-
 
 # Analysis
 
@@ -314,7 +313,7 @@ ggplot(games_rating_2, aes(x=yearpublished, y=mean_by_year)) +
         strip.text = element_text(size=14, face="bold", color="red"))
 ```
 
-Evaluated by the game ratings, these games that the prolific designers produce seem to be favored by the users, as they are fairly consistent. Especially in recent years, we see an upward trend in game ratings for most of the designers shown here.
+Evaluated by the game ratings, these games that the prolific designers produced seem to be favored by the users, as they are fairly consistent. Especially in recent years, we see an upward trend in game ratings for most of the designers shown here.
 
 **Top game categories by prolific game designers**
 
@@ -393,7 +392,7 @@ kable(top_categories %>% select(-norm_quant), format="html",
 
 ## Game Category & Mechanic Analysis
 
-In this section, I switch my focus to look at popular game categories and mechanics, using the number of 'owned' games as the metric to evaluate the popularity of a game.
+In this section, I switched my focus to look at popular game categories and mechanics, using the number of 'owned' games as the metric to evaluate the popularity of a game.
 
 ```{r}
 #| message=FALSE
@@ -408,7 +407,7 @@ owned_games <- games %>%
 
 **What are some of the most owned games?**
 
-Here, we show the details of top 15 most owned games since the 1990. Interestingly, Catan[@catan], which is a strategy-based game is the only game made in the 1990s that made the top 15.
+Here, we show the details of top 15 most owned games since the 1990. Interestingly, Catan[@catan], which is a strategy-based game, is the only game developed in the 1990s that made the top 15.
 
 ```{r}
 #| fig-cap: Table 1. Top 15 most owned games (1990-2023).
@@ -557,15 +556,15 @@ We observed that dice rolling, hand management, and variable player power games 
 
 # Summary
 
-In this example analysis, we explore the board game dataset to identify some of the best board game designers, based on quantity, rating, consistency, trends, owned status. We listed out a few of the best designers, including Reiner Knizia, Dean Essig, Eric M. Lang, Martin Wallace, & Matt Leacock. We also identified the top three most popular game categories and mechanics, such as card game and dice rolling, respectively. Overall, we see a positive trend of game ratings and quantity and expect the board game market to grow as projected.
+In this example analysis, we explored the board game dataset to identify some of the best board game designers, based on quantity, rating, consistency, trends, owned status. We listed out a few of the best designers, including Reiner Knizia, Dean Essig, Eric M. Lang, Martin Wallace, & Matt Leacock. We also identified the top three most popular game categories and mechanics, such as card game and dice rolling, respectively. Overall, we observed a positive trend of game ratings and quantity and expected the board game market to grow as projected.
 
 # Functions Used
 
-dplyr: mutate, filter, group_by, summarise, arrange, rename, select, left_join, rename_with, slice_head, ungroup, distinct, anti_join
+**dplyr:** mutate, filter, group_by, summarise, arrange, rename, select, left_join, rename_with, slice_head, ungroup, distinct, anti_join
 
-tidyr: separate_rows
+**tidyr:** separate_rows
 
-ggplot2: geom_bar, geom_col, geom_boxplot, geom_point, geom_smooth, geom_hex, facet_wrap
+**ggplot2:** geom_bar, geom_col, geom_boxplot, geom_point, geom_smooth, geom_hex, facet_wrap
 
 ::: {#bibliography}
 :::
